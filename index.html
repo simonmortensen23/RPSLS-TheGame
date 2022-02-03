@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Rock, Paper, Scissors, Lizard & Spock</h1>
+    <section class="game-area">
+        <div>
+            <p>Make a choice:</p>
+            <button aria-label="Rock" data-number="0" class="btn">Rock</button>
+            <button aria-label="Paper" data-number="1" class="btn">Paper</button>
+            <button aria-label="Scissors" data-number="2" class="btn">Scissors</button>
+            <button aria-label="Spock" data-number="3" class="btn">Lizard</button>
+            <button aria-label="Lizard" data-number="4" class="btn">Spock</button>  
+        </div>
+        <div id="info"></div>
+        <div class="player">
+            <h3 class="scores">Your score: <span id="player-score">0</span></h3>
+            <img id="player-image" src="assets/images/rpsls.png" alt="Rock, Paper, Scissors, Lizard & Spock">
+        </div>
+        <div class="computer">
+            <h3 class="scores">Opponent score: <span id="computer-score">0</span></h3>
+            <img id="computer-image" src="assets/images/rpsls.png" alt="Rock, Paper, Scissors, Lizard & Spock">
+        </div>
+
+    </section>
+    
+</body>
+</html>
