@@ -9,6 +9,7 @@ let moves = 0
 const playerImage = document.getElementById("player-image")
 const computerImage = document.getElementById("computer-image")
 const gameMessages = document.getElementById("game-messages")
+const gameOver = document.getElementsByClassName("choice-text")
 const choices = ["rock", "paper", "scissors", "lizard", "spock"]
 
 /**
@@ -31,7 +32,7 @@ for (let button of buttons){
 
 function startGame(playerChoice) {
 
-    
+    gameOver.innerText = "Make a choice:"
     moves++
     playerImage.src = `assets/images/${choices[playerChoice]}.png`
     playerImage.alt = choices[playerChoice]
@@ -46,7 +47,9 @@ function startGame(playerChoice) {
    
 
     if (playerScore == 3 || computerScore == 3 || moves == 5){
+        
         endGame()
+        
     
     } 
   
@@ -90,7 +93,17 @@ function checkWinner(computerChoice, playerChoice) {
          * 
          */
         function endGame () {
-            gameMessages.innerText = `The final score is: ${playerScore} / ${computerScore}`
+
+            for (let button of buttons){
+                
+                    button.style.display = "none"
+                }
+
+                
+                gameOver.innerHTML = "Game Over"
+                console.log(gameOver)
+            
+            gameMessages.innerText = `The final score is: ${playerScore} / ${computerScore} \nRefresh page to play again!`
             playerImage.src = `assets/images/rpsls.png`
             computerImage.src = `assets/images/rpsls.png`
             
