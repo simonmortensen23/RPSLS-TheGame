@@ -1,0 +1,41 @@
+html, body {
+    background-color: #fff;
+    color: #e36951;
+}
+
+h1 {
+    text-align: center;
+}
+
+.game-area {
+    width: 75%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.btns {
+    display: inline;
+}
+
+.btn {
+    background-color: #f7e6be;
+    color: #e36951;
+    border:1px solid #e36951;
+    
+    height: 40px;
+}
+
+.player {
+    float: left;
+    width: 35%;
+}
+
+.computer {
+    float: right;
+    width: 35%;
+    object-fit: cover;
+}
+
+img {
+    width: 100%;
+}
