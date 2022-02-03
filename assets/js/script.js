@@ -9,8 +9,9 @@ let moves = 0
 const playerImage = document.getElementById("player-image")
 const computerImage = document.getElementById("computer-image")
 const gameMessages = document.getElementById("game-messages")
-const gameOver = document.getElementsByClassName("choice-text")
+const choiceMessages = document.getElementById("choice-messages")
 const choices = ["rock", "paper", "scissors", "lizard", "spock"]
+choiceMessages.innerText = "Make a choice:"
 
 /**
  * Add event listener "click" to all buttons
@@ -20,7 +21,7 @@ for (let button of buttons){
         let playerChoice = this.getAttribute("data-number")
         startGame(playerChoice)
     })
-    
+   
 }
 
 /**
@@ -32,7 +33,7 @@ for (let button of buttons){
 
 function startGame(playerChoice) {
 
-    gameOver.innerText = "Make a choice:"
+    
     moves++
     playerImage.src = `assets/images/${choices[playerChoice]}.png`
     playerImage.alt = choices[playerChoice]
@@ -100,9 +101,7 @@ function checkWinner(computerChoice, playerChoice) {
                 }
 
                 
-                gameOver.innerHTML = "Game Over"
-                console.log(gameOver)
-            
+            choiceMessages.innerHTML = "Game Over"
             gameMessages.innerText = `The final score is: ${playerScore} / ${computerScore} \nRefresh page to play again!`
             playerImage.src = `assets/images/rpsls.png`
             computerImage.src = `assets/images/rpsls.png`
