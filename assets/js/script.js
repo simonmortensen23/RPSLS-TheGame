@@ -23,11 +23,7 @@ for (let button of buttons){
 
 function startGame(playerChoice) {
 
-    if (playerScore == 3){
-        gameMessages.innerText = `You have won ${playerScore} to ${computerScore}`
-    } else if (computerScore == 3){
-        gameMessages.innerText = `Computer have won ${computerScore} to ${playerScore}`
-    } else {
+    
 
     playerImage.src = `assets/images/${choices[playerChoice]}.png`
     playerImage.alt = choices[playerChoice]
@@ -37,11 +33,15 @@ function startGame(playerChoice) {
     computerImage.src = `assets/images/${choices[computerChoice]}.png`
     computerImage.alt = choices[computerChoice]
 
-    let result = checkWinner(choices[computerChoice], choices[playerChoice])
+    checkWinner(choices[computerChoice], choices[playerChoice])
 
-    updateScores(result)
+   
 
-}
+    if (playerScore == 3 || computerScore == 3){
+        endGame()
+    
+    } 
+  
 }
 
 function checkWinner(computerChoice, playerChoice) {
@@ -68,3 +68,11 @@ function checkWinner(computerChoice, playerChoice) {
             playerScore++
             playerScoreBoard.textContent = playerScore
         } }}
+
+
+        function endGame () {
+            gameMessages.innerText = `The final score is: ${playerScore} / ${computerScore}`
+            playerImage.src = `assets/images/rpsls.png`
+            computerImage.src = `assets/images/rpsls.png`
+            startGame(playerChoice)
+        }
