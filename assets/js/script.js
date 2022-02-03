@@ -5,6 +5,7 @@
 const buttons = document.getElementsByClassName("btn")
 let playerScore = 0
 let computerScore = 0
+let moves = 0
 const playerImage = document.getElementById("player-image")
 const computerImage = document.getElementById("computer-image")
 const gameMessages = document.getElementById("game-messages")
@@ -21,10 +22,17 @@ for (let button of buttons){
     
 }
 
+/**
+ * Function starts the game when player clicks a button
+ *  computer will choose random option
+ * Choices are compared and winner is given a point
+ * When computer or player reaches the score of 3, endGame() is called
+ */
+
 function startGame(playerChoice) {
 
     
-
+    moves++
     playerImage.src = `assets/images/${choices[playerChoice]}.png`
     playerImage.alt = choices[playerChoice]
 
@@ -37,12 +45,18 @@ function startGame(playerChoice) {
 
    
 
-    if (playerScore == 3 || computerScore == 3){
+    if (playerScore == 3 || computerScore == 3 || moves == 5){
         endGame()
     
     } 
   
 }
+
+/**
+ * Checks player and computer choice
+ *  and awards 1 point to the winner
+ *  
+ */
 
 function checkWinner(computerChoice, playerChoice) {
     const playerScoreBoard = document.getElementById("player-score")
@@ -67,12 +81,17 @@ function checkWinner(computerChoice, playerChoice) {
             gameMessages.innerText = `${playerChoice} beats ${computerChoice}`
             playerScore++
             playerScoreBoard.textContent = playerScore
-        } }}
+        }
+        
+    }}
 
 
+        /**
+         * 
+         */
         function endGame () {
             gameMessages.innerText = `The final score is: ${playerScore} / ${computerScore}`
             playerImage.src = `assets/images/rpsls.png`
             computerImage.src = `assets/images/rpsls.png`
-            startGame(playerChoice)
+            
         }
