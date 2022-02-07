@@ -1,5 +1,5 @@
 html, body {
-    background-color: #fff;
+    background-color:rgb(255, 248, 232);
     color: #e36951;
     display: grid;
 }
@@ -48,6 +48,8 @@ h1 {
     border:1px solid #e36951;
     margin: 5px 1px;
     height: 30px;
+    box-shadow:1px 3px #e36951;
+    cursor: pointer;
 }
 
 .player {
@@ -57,6 +59,7 @@ h1 {
     float: left;
     width: 35%;
     height: 40vh;
+    box-shadow:1px 3px #e36951;
     
     
 }
@@ -68,7 +71,12 @@ h1 {
     float: right;
     width: 35%;
     height: 40vh;
+    box-shadow:1px 3px #e36951;
    
+}
+
+.player-name {
+    
 }
 
 .score-board {
@@ -100,6 +108,8 @@ img {
     border:1px solid #e36951;
     margin: 5px 1px;
     height: 30px;
+    box-shadow:1px 3px #e36951;
+    cursor: pointer;
 }
 
 

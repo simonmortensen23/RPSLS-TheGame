@@ -72,7 +72,7 @@ function startGame(playerChoice) {
 function checkWinner(computerChoice, playerChoice) {
   
     if (computerChoice === playerChoice){
-        gameMessages.innerText = `Tie`
+        gameMessages.innerText = `\nTie`
         console.log("hello")
     } else if (playerChoice === 'rock'){
         if (computerChoice === 'paper'){
