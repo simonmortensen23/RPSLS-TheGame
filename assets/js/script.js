@@ -2,6 +2,7 @@
  * Declare constants for DOM elements
  * and choices for buttons
  */
+ 
 const buttons = document.getElementsByClassName("btn")
 const playerScoreBoard = document.getElementById("player-score")
 const computerScoreBoard = document.getElementById("computer-score")

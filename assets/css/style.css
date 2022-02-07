@@ -47,7 +47,6 @@ h1 {
     color: #e36951;
     border:1px solid #e36951;
     margin: 5px 1px;
-    
     height: 30px;
 }
 
@@ -93,6 +92,14 @@ img {
     justify-content: center;
     clear: both;
     
+}
+
+.htp-btn {
+    background-color: #f7e6be;
+    color: #e36951;
+    border:1px solid #e36951;
+    margin: 5px 1px;
+    height: 30px;
 }
 
 
