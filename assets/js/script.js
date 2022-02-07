@@ -54,7 +54,7 @@ function startGame(playerChoice) {
 
    
 
-    if (playerScore == 20 || computerScore == 20 || moves == 20){
+    if (playerScore == 10 || computerScore == 10 || moves == 20){
         
         endGame()
         
@@ -208,7 +208,8 @@ function checkWinner(computerChoice, playerChoice) {
             if (htp.innerHTML == ""){
                 console.log(howToPlay);
             htp.innerHTML = `<h3>How To Play:</h3>
-            Scissors cuts Paper //
+            <div><h4>Rules:</h4> The player with most points after 20 moves wins!</div> <br> <br>
+            <div>Scissors cuts Paper //
             Paper covers Rock //
             Rock crushes Lizard //
             Lizard poisons Spock //
@@ -217,7 +218,7 @@ function checkWinner(computerChoice, playerChoice) {
             Lizard eats Paper //
             Paper disproves Spock //
             Spock vaporizes Rock //
-            Rock crushes Scissors
+            Rock crushes Scissors</div>
             <img src="assets/images/rpsls.png">`
             htp.style.width = "75%"
             htp.style.border = "4px solid #e36951"
