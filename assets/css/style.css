@@ -9,13 +9,28 @@ h1 {
 
 .game-area {
     width: 75%;
-    min-height: 50vh;
-    margin: 0 auto;
+    min-height: 30vh;
+    margin:0 auto;
     text-align: center;
+    position: relative;
+    
 }
 
-.game-messages {
-    border: 3px solid #e36951;
+.htp {
+    margin: 0 auto;
+    position: absolute;
+}
+
+#choice-messages {
+    border-bottom:1px  solid #e36951;
+    width: fit-content;
+    justify-content: center;
+    margin:auto;
+}
+
+#game-messages {
+   
+    margin: 0 auto;
 }
 
 .moves {
@@ -26,12 +41,14 @@ h1 {
 
 .btns {
     display: inline;
+    
 }
 
 .btn {
     background-color: #f7e6be;
     color: #e36951;
     border:1px solid #e36951;
+    margin: 5px 1px;
     
     height: 30px;
 }

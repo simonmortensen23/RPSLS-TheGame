@@ -3,15 +3,19 @@
  * and choices for buttons
  */
 const buttons = document.getElementsByClassName("btn")
-let playerScore = 0
-let computerScore = 0
-let moves = 0
+const playerScoreBoard = document.getElementById("player-score")
+const computerScoreBoard = document.getElementById("computer-score")
+const movesCounter = document.getElementById("moves-counter")
 const playerImage = document.getElementById("player-image")
 const computerImage = document.getElementById("computer-image")
 const gameMessages = document.getElementById("game-messages")
 const choiceMessages = document.getElementById("choice-messages")
 const choices = ["rock", "paper", "scissors", "lizard", "spock"]
 choiceMessages.innerText = "Make a choice:"
+gameMessages.innerText = "Press one of the buttons to start game \nor press How To Play for game instructions"
+let playerScore = 0
+let computerScore = 0
+let moves = 0
 
 /**
  * Add event listener "click" to all buttons
@@ -32,8 +36,9 @@ for (let button of buttons){
  */
 
 function startGame(playerChoice) {
+    
 
-    const movesCounter = document.getElementById("moves-counter")
+    
     moves++
     movesCounter.textContent = moves
     playerImage.src = `assets/images/${choices[playerChoice]}.png`
@@ -64,8 +69,7 @@ function startGame(playerChoice) {
  */
 
 function checkWinner(computerChoice, playerChoice) {
-    const playerScoreBoard = document.getElementById("player-score")
-    const computerScoreBoard = document.getElementById("computer-score")
+  
     if (computerChoice === playerChoice){
         gameMessages.innerText = `Tie`
         console.log("hello")
