@@ -75,95 +75,95 @@ function checkWinner(computerChoice, playerChoice) {
         console.log("hello")
     } else if (playerChoice === 'rock'){
         if (computerChoice === 'paper'){
-            gameMessages.innerText = `${computerChoice} covers ${playerChoice}`
+            gameMessages.innerText = `Player chose ${playerChoice} & computer chose ${computerChoice} \n${computerChoice} covers ${playerChoice}`
             computerScore++
             computerScoreBoard.textContent = computerScore
         }else if (computerChoice === 'spock') {
-            gameMessages.innerText = `${computerChoice} vaporizes ${playerChoice}`
+            gameMessages.innerText = `Player chose ${playerChoice} & computer chose ${computerChoice} \n${computerChoice} vaporizes ${playerChoice}`
             computerScore++
             computerScoreBoard.textContent = computerScore 
         } else if (computerChoice === 'scissors'){
-            gameMessages.innerText = `${playerChoice} crushes ${computerChoice}`
+            gameMessages.innerText = `Player chose ${playerChoice} & computer chose ${computerChoice} \n${playerChoice} crushes ${computerChoice}`
             playerScore++
             playerScoreBoard.textContent = playerScore
         } else if (computerChoice === 'lizard'){
-            gameMessages.innerText = `${playerChoice} crushes ${computerChoice}`
+            gameMessages.innerText = `Player chose ${playerChoice} & computer chose ${computerChoice} \n${playerChoice} crushes ${computerChoice}`
             playerScore++
             playerScoreBoard.textContent = playerScore
         }
         
     } else if (playerChoice === 'paper'){
         if (computerChoice === 'scissors'){
-            gameMessages.innerText = `${computerChoice} cuts ${playerChoice}`
+            gameMessages.innerText = `Player chose ${playerChoice} & computer chose ${computerChoice} \n${computerChoice} cuts ${playerChoice}`
             computerScore++
             computerScoreBoard.textContent = computerScore
         }else if (computerChoice === 'lizard') {
-            gameMessages.innerText = `${computerChoice} eats ${playerChoice}`
+            gameMessages.innerText = `Player chose ${playerChoice} & computer chose ${computerChoice} \n${computerChoice} eats ${playerChoice}`
             computerScore++
             computerScoreBoard.textContent = computerScore 
         } else if (computerChoice === 'rock'){
-            gameMessages.innerText = `${playerChoice} covers ${computerChoice}`
+            gameMessages.innerText = `Player chose ${playerChoice} & computer chose ${computerChoice} \n${playerChoice} covers ${computerChoice}`
             playerScore++
             playerScoreBoard.textContent = playerScore
         } else if (computerChoice === 'spock') {
-            gameMessages.innerText = `${playerChoice} disproves ${computerChoice}`
+            gameMessages.innerText = `Player chose ${playerChoice} & computer chose ${computerChoice} \n${playerChoice} disproves ${computerChoice}`
             playerScore++
             playerScoreBoard.textContent = playerScore
         }
         
     } else if (playerChoice == 'scissors'){
         if (computerChoice === 'rock'){
-            gameMessages.innerText = `${computerChoice} crushes ${playerChoice}`
+            gameMessages.innerText = `Player chose ${playerChoice} & computer chose ${computerChoice} \n${computerChoice} crushes ${playerChoice}`
             computerScore++
             computerScoreBoard.textContent = computerScore
         }else if (computerChoice === 'spock') {
-            gameMessages.innerText = `${computerChoice} smashes ${playerChoice}`
+            gameMessages.innerText = `Player chose ${playerChoice} & computer chose ${computerChoice} \n${computerChoice} smashes ${playerChoice}`
             computerScore++
             computerScoreBoard.textContent = computerScore 
         } else if (computerChoice === 'paper'){
-            gameMessages.innerText = `${playerChoice} cuts ${computerChoice}`
+            gameMessages.innerText = `Player chose ${playerChoice} & computer chose ${computerChoice} \n${playerChoice} cuts ${computerChoice}`
             playerScore++
             playerScoreBoard.textContent = playerScore
         } else {
-            gameMessages.innerText = `${playerChoice} decapitates ${computerChoice}`
+            gameMessages.innerText = `Player chose ${playerChoice} & computer chose ${computerChoice} \n${playerChoice} decapitates ${computerChoice}`
             playerScore++
             playerScoreBoard.textContent = playerScore
         }
         
     } else if (playerChoice == 'lizard'){
         if (computerChoice === 'scissors'){
-            gameMessages.innerText = `${computerChoice} decapitates ${playerChoice}`
+            gameMessages.innerText = `Player chose ${playerChoice} & computer chose ${computerChoice} \n${computerChoice} decapitates ${playerChoice}`
             computerScore++
             computerScoreBoard.textContent = computerScore
         }else if (computerChoice === 'rock') {
-            gameMessages.innerText = `${computerChoice} crushes ${playerChoice}`
+            gameMessages.innerText = `Player chose ${playerChoice} & computer chose ${computerChoice} \n${computerChoice} crushes ${playerChoice}`
             computerScore++
             computerScoreBoard.textContent = computerScore 
         } else if (computerChoice === 'paper'){
-            gameMessages.innerText = `${playerChoice} eats ${computerChoice}`
+            gameMessages.innerText = `Player chose ${playerChoice} & computer chose ${computerChoice} \n${playerChoice} eats ${computerChoice}`
             playerScore++
             playerScoreBoard.textContent = playerScore
         } else if (computerChoice === 'spock') {
-            gameMessages.innerText = `${playerChoice} poisons ${computerChoice}`
+            gameMessages.innerText = `Player chose ${playerChoice} & computer chose ${computerChoice} \n${playerChoice} poisons ${computerChoice}`
             playerScore++
             playerScoreBoard.textContent = playerScore
         }
         
     } else if (playerChoice == 'spock'){
         if (computerChoice === 'paper'){
-            gameMessages.innerText = `${computerChoice} disproves ${playerChoice}`
+            gameMessages.innerText = `Player chose ${playerChoice} & computer chose ${computerChoice} \n${computerChoice} disproves ${playerChoice}`
             computerScore++
             computerScoreBoard.textContent = computerScore
         }else if (computerChoice === 'lizard') {
-            gameMessages.innerText = `${computerChoice} poisons ${playerChoice}`
+            gameMessages.innerText = `Player chose ${playerChoice} & computer chose ${computerChoice} \n${computerChoice} poisons ${playerChoice}`
             computerScore++
             computerScoreBoard.textContent = computerScore 
         } else if (computerChoice === 'scissors'){
-            gameMessages.innerText = `${playerChoice} smashes ${computerChoice}`
+            gameMessages.innerText = `Player chose ${playerChoice} & computer chose ${computerChoice} \n${playerChoice} smashes ${computerChoice}`
             playerScore++
             playerScoreBoard.textContent = playerScore
         } else if (computerChoice === 'rock') {
-            gameMessages.innerText = `${playerChoice} vaporizes ${computerChoice}`
+            gameMessages.innerText = `Player chose ${playerChoice} & computer chose ${computerChoice} \n${playerChoice} vaporizes ${computerChoice}`
             playerScore++
             playerScoreBoard.textContent = playerScore
         }
@@ -185,13 +185,18 @@ function checkWinner(computerChoice, playerChoice) {
                 if (playerScore > computerScore) {
                     choiceMessages.innerHTML = "Game Over"
                     gameMessages.innerText = `Player has won \nThe final score is: ${playerScore} / ${computerScore} \nRefresh page to play again!`
-                    playerImage.src = `assets/images/winner.png`
-                    computerImage.src = `assets/images/loser.png`
+                    playerImage.src = `assets/images/loserWinner.png`
+                    computerImage.src = `assets/images/computerLose.png`
                 } else if (computerScore > playerScore) {
                     choiceMessages.innerHTML = "Game Over"
                     gameMessages.innerText = `Computer has won \nThe final score is: ${playerScore} / ${computerScore} \nRefresh page to play again!`
                     playerImage.src = `assets/images/loser.png`
-                    computerImage.src = `assets/images/winner.png`
+                    computerImage.src = `assets/images/computerWin.png`
+                } else {
+                    choiceMessages.innerHTML ="Game Over"
+                    gameMessages.innerText = `Game is tie \nThe final score is: ${playerScore} / ${computerScore} \nRefresh page to play again!`
+                    playerImage.src = `assets/images/loser.png`
+                    computerImage.src = `assets/images/computerWin.png`
                 }
                   
         }
@@ -201,7 +206,15 @@ function checkWinner(computerChoice, playerChoice) {
             let htp = document.getElementById('htpText')
             if (htp.innerHTML == ""){
                 console.log(howToPlay);
-            htp.innerHTML = "<h2>How To Play</h2> <br> Rules: <ul><li>Enter Username</li><li>The player gets 10 questions</li><li>1 point per question</li><li>Three wrong answers and the game is over</li></ul>"
+            htp.innerText = `How To Play Rules Scissors cuts Paper Paper covers Rock
+            Rock crushes Lizard
+            Lizard poisons Spock
+            Spock smashes Scissors
+            Scissors decapitates Lizard
+            Lizard eats Paper
+            Paper disproves Spock
+            Spock vaporizes Rock
+            Rock crushes Scissors`
             htp.style.width = "50vw"
             htp.style.border = "4px solid #37003c"
             htp.style.boxShadow = "5px 10px #37003c"
