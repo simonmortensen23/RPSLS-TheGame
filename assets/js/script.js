@@ -54,7 +54,7 @@ function startGame(playerChoice) {
 
    
 
-    if (playerScore == 10 || computerScore == 10 || moves == 20){
+    if (moves == 20){
         
         endGame()
         
@@ -196,7 +196,7 @@ function checkWinner(computerChoice, playerChoice) {
                 } else {
                     choiceMessages.innerHTML ="Game Over"
                     gameMessages.innerText = `Game is tie \nThe final score is: ${playerScore} / ${computerScore} \nRefresh page to play again!`
-                    playerImage.src = `assets/images/loser.png`
+                    playerImage.src = `assets/images/player.png`
                     computerImage.src = `assets/images/computerWin.png`
                 }
                   
