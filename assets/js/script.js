@@ -180,14 +180,14 @@ function checkWinner(computerChoice, playerChoice) {
                 }
                 if (playerScore > computerScore) {
                     choiceMessages.innerHTML = "Game Over"
-                    gameMessages.innerText = `The final score is: ${playerScore} / ${computerScore} \nRefresh page to play again!`
-                    playerImage.src = `assets/images/victory.jpg`
-                    computerImage.src = `assets/images/defeat.jpg`
+                    gameMessages.innerText = `Player has won \nThe final score is: ${playerScore} / ${computerScore} \nRefresh page to play again!`
+                    playerImage.src = `assets/images/winner.png`
+                    computerImage.src = `assets/images/loser.png`
                 } else if (computerScore > playerScore) {
                     choiceMessages.innerHTML = "Game Over"
-                    gameMessages.innerText = `The final score is: ${playerScore} / ${computerScore} \nRefresh page to play again!`
-                    playerImage.src = `assets/images/defeat.jpg`
-                    computerImage.src = `assets/images/victory.jpg`
+                    gameMessages.innerText = `Computer has won \nThe final score is: ${playerScore} / ${computerScore} \nRefresh page to play again!`
+                    playerImage.src = `assets/images/loser.png`
+                    computerImage.src = `assets/images/winner.png`
                 }
                 
            
