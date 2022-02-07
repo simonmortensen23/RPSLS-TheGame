@@ -206,18 +206,19 @@ function checkWinner(computerChoice, playerChoice) {
             let htp = document.getElementById('htpText')
             if (htp.innerHTML == ""){
                 console.log(howToPlay);
-            htp.innerText = `How To Play:
-            Scissors cuts Paper 
-            Paper covers Rock
-            Rock crushes Lizard
-            Lizard poisons Spock
-            Spock smashes Scissors
-            Scissors decapitates Lizard
-            Lizard eats Paper
-            Paper disproves Spock
-            Spock vaporizes Rock
-            Rock crushes Scissors`
-            htp.style.width = "40vw"
+            htp.innerHTML = `<h3>How To Play:</h3>
+            Scissors cuts Paper //
+            Paper covers Rock //
+            Rock crushes Lizard //
+            Lizard poisons Spock //
+            Spock smashes Scissors //
+            Scissors decapitates Lizard //
+            Lizard eats Paper //
+            Paper disproves Spock //
+            Spock vaporizes Rock //
+            Rock crushes Scissors
+            <img src="assets/images/rpsls.png">`
+            htp.style.width = "75%"
             htp.style.border = "4px solid #e36951"
             htp.style.boxShadow = "5px 10px #e36951"
             htp.style.margin = "0 auto"
