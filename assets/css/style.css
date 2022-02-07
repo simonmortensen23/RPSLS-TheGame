@@ -9,6 +9,7 @@ h1 {
 
 .game-area {
     width: 75%;
+    min-height: 50vh;
     margin: 0 auto;
     text-align: center;
 }
@@ -36,6 +37,9 @@ h1 {
 }
 
 .player {
+    background-color: #f7e6be;
+    border:5px solid #e36951;
+    padding: 5px;
     float: left;
     width: 35%;
     height: 300px;
@@ -44,6 +48,9 @@ h1 {
 }
 
 .computer {
+    background-color: #f7e6be;
+    border:5px solid #e36951;
+    padding: 5px;
     float: right;
     width: 35%;
     height: 300px;
@@ -54,4 +61,15 @@ img {
     width:  100%;
     height: 100%;
     object-fit: contain;
+}
+
+.htp {
+    clear: both;
+    position: relative;
+    
+}
+
+.htp button {
+    margin: 0 auto;
+    justify-content: center;
 }

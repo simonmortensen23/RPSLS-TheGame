@@ -189,8 +189,21 @@ function checkWinner(computerChoice, playerChoice) {
                     playerImage.src = `assets/images/loser.png`
                     computerImage.src = `assets/images/winner.png`
                 }
-                
-           
-            
-            
+                  
+        }
+
+        function howToPlay() {
+    
+            let htp = document.getElementById('htpText')
+            if (htp.innerHTML == ""){
+                console.log(howToPlay);
+            htp.innerHTML = "<h2>How To Play</h2> <br> Rules: <ul><li>Enter Username</li><li>The player gets 10 questions</li><li>1 point per question</li><li>Three wrong answers and the game is over</li></ul>"
+            htp.style.width = "50vw"
+            htp.style.border = "4px solid #37003c"
+            htp.style.boxShadow = "5px 10px #37003c"
+        } else {
+            console.log("Hi")
+            htp.innerHTML = ""
+            htp.style.border = "0px"
+            } 
         }
