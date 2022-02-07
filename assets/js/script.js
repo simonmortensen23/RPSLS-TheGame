@@ -14,7 +14,7 @@ const choices = ["rock", "paper", "scissors", "lizard", "spock"]
 choiceMessages.innerText = "Make a choice:"
 gameMessages.innerText = "Press one of the buttons to start game \nor press How To Play for game instructions"
 let playerScore = 0
-let computerScore = 0
+let computerScore = 0 
 let moves = 0
 
 /**
@@ -206,7 +206,9 @@ function checkWinner(computerChoice, playerChoice) {
             let htp = document.getElementById('htpText')
             if (htp.innerHTML == ""){
                 console.log(howToPlay);
-            htp.innerText = `How To Play Rules Scissors cuts Paper Paper covers Rock
+            htp.innerText = `How To Play:
+            Scissors cuts Paper 
+            Paper covers Rock
             Rock crushes Lizard
             Lizard poisons Spock
             Spock smashes Scissors
@@ -215,9 +217,11 @@ function checkWinner(computerChoice, playerChoice) {
             Paper disproves Spock
             Spock vaporizes Rock
             Rock crushes Scissors`
-            htp.style.width = "50vw"
-            htp.style.border = "4px solid #37003c"
-            htp.style.boxShadow = "5px 10px #37003c"
+            htp.style.width = "40vw"
+            htp.style.border = "4px solid #e36951"
+            htp.style.boxShadow = "5px 10px #e36951"
+            htp.style.margin = "0 auto"
+           
         } else {
             console.log("Hi")
             htp.innerHTML = ""
