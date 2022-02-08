@@ -11,20 +11,41 @@ const playerImage = document.getElementById("player-image")
 const computerImage = document.getElementById("computer-image")
 const gameMessages = document.getElementById("game-messages")
 const choiceMessages = document.getElementById("choice-messages")
-const choices = {
+/**const choices = {
 ROCK:"rock",
 PAPER: "paper",
 SCISSORS: "scissors",
 LIZARD: "lizard",
 SPOCK: "spock",
-};
-
-//[]
-const rules =[
+}; */
+const choices = ["rock", "paper", "scissors", "lizard", "spock"]
+//[playerChoice, computerChoice, verb, playerWin]
+const rules = [
     [choices.ROCK, choices.SCISSORS, 'crushes', true],
     [choices.ROCK, choices.PAPER, 'covers', false],
     [choices.ROCK, choices.LIZARD, 'crushes', true],
-    [choices.ROCK, choices.SPOCK, 'crushes', true],
+    [choices.ROCK, choices.SPOCK, 'vaporizes', false],
+    [choices.SCISSORS, choices.SPOCK, 'smashes', false],
+    [choices.SCISSORS, choices.PAPER, 'cuts', true],
+    [choices.SCISSORS, choices.LIZARD, 'decapitates', true],
+    [choices.SCISSORS, choices.ROCK, 'crushes', false],
+    [choices.PAPER, choices.ROCK, 'covers', true],
+    [choices.PAPER, choices.SCISSORS, 'cuts', false],
+    [choices.PAPER, choices.LIZARD, 'eats', false],
+    [choices.PAPER, choices.SPOCK, 'disproves', true],
+    [choices.LIZARD, choices.SCISSORS, 'decapitates', false],
+    [choices.LIZARD, choices.PAPER, 'eats', true],
+    [choices.LIZARD, choices.ROCK, 'crushes', false],
+    [choices.LIZARD, choices.SPOCK, 'poisons', true],
+    [choices.SPOCK, choices.ROCK, 'vaporizes', true],
+    [choices.SPOCK, choices.PAPER, 'disproves', false],
+    [choices.SPOCK, choices.SCISSORS, 'smashes', true],
+    [choices.SPOCK, choices.LIZARD, 'poisons', false],
+    [choices.SPOCK, choices.SPOCK, 'poisons', false],
+    [choices.LIZARD, choices.LIZARD, 'poisons', false],
+    [choices.ROCK, choices.ROCK, 'poisons', false],
+    [choices.SCISSORS, choices.SCISSORS, 'poisons', false],
+    [choices.PAPER, choices.PAPER, 'poisons', false],
 ];
 
 choiceMessages.innerText = "Make a choice:"
@@ -54,7 +75,7 @@ let moves = 0
 
 function startGame(playerChoice) {
     
-
+    console.log({playerChoice})
     
     moves++
     movesCounter.textContent = moves
@@ -79,7 +100,7 @@ function startGame(playerChoice) {
   
 }
 
-function getMessage(playerChoice, computerChoice, verb, playerWin) {
+/** function getMessage(playerChoice, computerChoice, verb, playerWin) {
     let msg = `Player chose ${playerChoice} & computer chose ${computerChoice}\n`
     if (playerWin) {
         msg += `${playerChoice} ${verb} ${computerChoice}`;
@@ -87,7 +108,7 @@ function getMessage(playerChoice, computerChoice, verb, playerWin) {
        msg += `${computerChoice} ${verb} ${playerChoice}`; 
     }
     return msg;
-}
+} */
 
 /**
  * Checks player and computer choice
@@ -97,21 +118,28 @@ function getMessage(playerChoice, computerChoice, verb, playerWin) {
 
 function checkWinner(computerChoice, playerChoice) {
    // search in rules and unpack/destruct details to local variables
-  const [pChoice, cChoice, verb, playerWin] = rules.find(
+ /**   console.log({rules})
+  const [pChoice, cChoice, verb, playerWin] = [] || rules.find(
       (rule) => rule[0] === playerChoice && rule[1] === computerChoice
-   );
-
+   )
+   
+   if ([pChoice, cChoice, verb, playerWin].includes(undefined)) {
+    console.log("Reglerne er konfigureret forkert");
+ }
+    
    if (playerWin) {
-       plaerScore++
+       playerScore++
+       playerScoreBoard.textContent = playerScore
    } else {
-       computerScore++
+       computerScore++ 
+       computerScoreBoard.textContent = computerScore
    }
-   gameMessages.innerText = getMessage(pChoice, cChoice, verb, playerWin)
- /**   if (computerChoice === playerChoice){
+   gameMessages.innerText = getMessage(pChoice, cChoice, verb, playerWin) */
+   if (computerChoice === playerChoice){
         gameMessages.innerText = `\nTie`
-        console.log("hello")
-    } else if (playerChoice === 'rock'){
-        if (computerChoice === 'paper'){
+        console.log(computerChoice)
+    } else if (playerChoice === "rock"){
+        if (computerChoice === "paper"){
             gameMessages.innerText = `Player chose ${playerChoice} & computer chose ${computerChoice} \n${computerChoice} covers ${playerChoice}`
             computerScore++
             computerScoreBoard.textContent = computerScore
@@ -205,7 +233,7 @@ function checkWinner(computerChoice, playerChoice) {
             playerScoreBoard.textContent = playerScore
         }
         
-    }  */
+    }  
 
 }
 
