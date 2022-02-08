@@ -11,7 +11,22 @@ const playerImage = document.getElementById("player-image")
 const computerImage = document.getElementById("computer-image")
 const gameMessages = document.getElementById("game-messages")
 const choiceMessages = document.getElementById("choice-messages")
-const choices = ["rock", "paper", "scissors", "lizard", "spock"]
+const choices = {
+ROCK:"rock",
+PAPER: "paper",
+SCISSORS: "scissors",
+LIZARD: "lizard",
+SPOCK: "spock",
+};
+
+//[]
+const rules =[
+    [choices.ROCK, choices.SCISSORS, 'crushes', true],
+    [choices.ROCK, choices.PAPER, 'covers', false],
+    [choices.ROCK, choices.LIZARD, 'crushes', true],
+    [choices.ROCK, choices.SPOCK, 'crushes', true],
+];
+
 choiceMessages.innerText = "Make a choice:"
 gameMessages.innerText = "Press one of the buttons to start game \nor press How To Play for game instructions"
 let playerScore = 0
@@ -19,15 +34,16 @@ let computerScore = 0
 let moves = 0
 
 /**
- * Add event listener "click" to all buttons
+ * Add event listener "click" to game buttons
  */
-for (let button of buttons){
+
+ for (button of buttons){
     button.addEventListener("click", function (){
         let playerChoice = this.getAttribute("data-number")
         startGame(playerChoice)
     })
    
-}
+} 
 
 /**
  * Function starts the game when player clicks a button
@@ -42,11 +58,11 @@ function startGame(playerChoice) {
     
     moves++
     movesCounter.textContent = moves
+
     playerImage.src = `assets/images/${choices[playerChoice]}.png`
     playerImage.alt = choices[playerChoice]
 
     let computerChoice = Math.floor(Math.random() *5)
-
     computerImage.src = `assets/images/${choices[computerChoice]}.png`
     computerImage.alt = choices[computerChoice]
 
@@ -63,6 +79,16 @@ function startGame(playerChoice) {
   
 }
 
+function getMessage(playerChoice, computerChoice, verb, playerWin) {
+    let msg = `Player chose ${playerChoice} & computer chose ${computerChoice}\n`
+    if (playerWin) {
+        msg += `${playerChoice} ${verb} ${computerChoice}`;
+    } else {
+       msg += `${computerChoice} ${verb} ${playerChoice}`; 
+    }
+    return msg;
+}
+
 /**
  * Checks player and computer choice
  *  and awards 1 point to the winner
@@ -70,8 +96,18 @@ function startGame(playerChoice) {
  */
 
 function checkWinner(computerChoice, playerChoice) {
-  
-    if (computerChoice === playerChoice){
+   // search in rules and unpack/destruct details to local variables
+  const [pChoice, cChoice, verb, playerWin] = rules.find(
+      (rule) => rule[0] === playerChoice && rule[1] === computerChoice
+   );
+
+   if (playerWin) {
+       plaerScore++
+   } else {
+       computerScore++
+   }
+   gameMessages.innerText = getMessage(pChoice, cChoice, verb, playerWin)
+ /**   if (computerChoice === playerChoice){
         gameMessages.innerText = `\nTie`
         console.log("hello")
     } else if (playerChoice === 'rock'){
@@ -169,7 +205,7 @@ function checkWinner(computerChoice, playerChoice) {
             playerScoreBoard.textContent = playerScore
         }
         
-    }
+    }  */
 
 }
 
