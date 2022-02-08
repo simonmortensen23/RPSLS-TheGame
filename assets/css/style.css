@@ -112,4 +112,7 @@ img {
     cursor: pointer;
 }
 
+#htpText {
+    display: none;
+}
 

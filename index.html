@@ -11,13 +11,10 @@
     <section class="game-area">
         
         <div class="btns">
+            <button onclick="startGame()">play</button>
             <div class="moves">Move: <span id="moves-counter">0</span> / 20</div>
             <p id="choice-messages"></p>
-            <button aria-label="Rock" data-number="0" class="btn">Rock</button>
-            <button aria-label="Paper" data-number="1" class="btn">Paper</button>
-            <button aria-label="Scissors" data-number="2" class="btn">Scissors</button>
-            <button aria-label="Spock" data-number="3" class="btn">Lizard</button>
-            <button aria-label="Lizard" data-number="4" class="btn">Spock</button>  
+            <div id="choices-container"></div>  
         </div>
         <div id="game-messages"></div>
         
@@ -34,7 +31,23 @@
         
         <div class="htp">
         <button class="htp-btn" onClick="howToPlay()">How To Play</button>
-        <div id="htpText"></div>
+        <div class="htp-text" id="htpText">
+            `<h3>How To Play:</h3>
+            <div><h4>Rules:</h4> The player with most points after 20 moves wins!</div> <br> <br>
+            <div>
+            Scissors cuts Paper //
+            Paper covers Rock //
+            Rock crushes Lizard //
+            Lizard poisons Spock //
+            Spock smashes Scissors //
+            Scissors decapitates Lizard //
+            Lizard eats Paper //
+            Paper disproves Spock //
+            Spock vaporizes Rock //
+            Rock crushes Scissors
+            </div>
+            <img src="assets/images/rpsls.png">`
+        </div>
     </div>
     </section>
 
