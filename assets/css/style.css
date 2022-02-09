@@ -45,11 +45,18 @@ h1 {
 .btn {
     background-color: #f7e6be;
     color: #e36951;
+    letter-spacing: 1px;
     border:1px solid #e36951;
-    margin: 5px 1px;
+    font-weight: bold;
+    margin: 5px 5px;
     height: 30px;
     box-shadow:1px 3px #e36951;
     cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+
+.btn:hover {
+    transform: scale(1.2);
 }
 
 .player {
@@ -100,6 +107,7 @@ img {
     justify-content: center;
     clear: both;
     
+    
 }
 
 .htp-btn {
@@ -114,5 +122,13 @@ img {
 
 #htpText {
     display: none;
+    border: 5px solid #e36951;
+    padding: 4px;
+    
+}
+
+#htpText img {
+    height: auto;
+    max-width: 75%;
 }
 

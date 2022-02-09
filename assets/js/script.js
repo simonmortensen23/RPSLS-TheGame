@@ -106,16 +106,16 @@ const CHOICES_CONFIG = [
         computerImage.src = `assets/images/${computerChoiceId}.png`
         computerImage.alt = computerChoiceId
 
-        gameMessages.innerText = `Player chose ${playerChoiceId} & computer chose ${computerChoiceId} `
+        gameMessages.innerText = `\nPlayer chose ${playerChoiceId} & computer chose ${computerChoiceId} `
         if(computerChoiceId === playerChoiceId) {
-            //draw
+            //If game draws
             resultMessages.innerText = `\nTie`
         } else if(playerChoiceData.winsOver.includes(computerChoiceId)) {
-            // Player won
+            // If player wins
             resultMessages.innerText = `\n${playerChoiceId} beats ${computerChoiceId}`
             playerScore++;
         } else {
-            // Comp wins
+            // If computer wins
             resultMessages.innerText = `\n${computerChoiceId} beats ${playerChoiceId}`
             computerScore++;
         }
@@ -155,7 +155,7 @@ const CHOICES_CONFIG = [
         }
         choiceMessages.innerHTML ="Game Over";
         gameMessages.innerHTML = `${msg} \nThe final score is: ${playerScore} / ${computerScore}`
-        resultMessages.innerHTML = `<button class="htp-btn" onClick="window.location.reload();">Refresh</button> page to play again!`
+        resultMessages.innerHTML = `Go for a walk or <button class="htp-btn" onClick="window.location.reload();">Play Again!</button>`
     }
 
         function howToPlay() {
