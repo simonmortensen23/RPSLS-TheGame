@@ -1,11 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300&display=swap');
+
 html,
 body {
     background-color: rgb(255, 248, 232);
     color: #e36951;
     display: grid;
+    font-family: 'Public Sans', sans-serif;
 }
 
-h1 {
+header {
     text-align: center;
 }
 
@@ -40,6 +43,7 @@ h1 {
     background-color: #f7e6be;
     color: #e36951;
     letter-spacing: 1px;
+    font-family: 'Public Sans', sans-serif;
     border: 1px solid #e36951;
     font-weight: bold;
     margin: 5px 5px;
@@ -73,8 +77,6 @@ h1 {
     box-shadow: 1px 3px #e36951;
 }
 
-.player-name {
-}
 
 .score-board {
     display: inline-block;
@@ -106,6 +108,8 @@ img {
     height: 30px;
     box-shadow: 1px 3px #e36951;
     cursor: pointer;
+    font-family: 'Public Sans', sans-serif;
+    font-weight: bold;
 }
 
 #htpText {
