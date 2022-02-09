@@ -1,61 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Rock, Paper, Scissors, Lizard & Spock</h1>
-    <section class="game-area">
-        
-        <div class="btns">
-            
-            <div class="moves">Move: <span id="moves-counter">0</span> / 20</div>
-            <p id="choice-messages"></p>
-            
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Rock, Paper, Scissors, Lizard & Spock</h1>
+        <section class="game-area">
+            <div class="btns">
+                <div class="moves">Move: <span id="moves-counter">0</span> / 20</div>
+                <p id="choice-messages"></p>
 
-            <div id="choices-container"></div>  
-        </div>
-        <div id="game-messages"></div>
-        <h3 id="result-messages"></h3>
-        <div class="player">
-            <div class="player-name"><h3>You</h3></div>
-            <img id="player-image" src="assets/images/player.png" alt="Rock, Paper, Scissors, Lizard & Spock">
-            <h4 class="scores">Your score: <span id="player-score">0 </span></h4>
-        </div>
-        <div class="computer">
-            <div class="player-name"><h3>Computer</h3></div>
-            <img id="computer-image" src="assets/images/computerWin.png" alt="Rock, Paper, Scissors, Lizard & Spock">
-            <h4 class="scores">Opponent score: <span id="computer-score">0</span></h4>
-        </div>
-        
-        
-        <div class="htp">
-        <button class="htp-btn" onClick="howToPlay()">How To Play</button>
-        <div id="htpText">
-            <h3>How To Play:</h3>
-            <div><h4>Rules:</h4> The player with most points after 20 moves wins!</div> <br> <br>
-            <div>
-            Scissors cuts Paper //
-            Paper covers Rock //
-            Rock crushes Lizard //
-            Lizard poisons Spock //
-            Spock smashes Scissors //
-            Scissors decapitates Lizard //
-            Lizard eats Paper //
-            Paper disproves Spock //
-            Spock vaporizes Rock //
-            Rock crushes Scissors
+                <div id="choices-container"></div>
             </div>
-            <img src="assets/images/rpsls.png">
-        </div>
-    </div>
-    </section>
+            <div id="game-messages"></div>
+            <h3 id="result-messages"></h3>
+            <div class="player">
+                <div class="player-name"><h3>You</h3></div>
+                <img id="player-image" src="assets/images/player.png" alt="Rock, Paper, Scissors, Lizard & Spock" />
+                <h4 class="scores">Your score: <span id="player-score">0 </span></h4>
+            </div>
+            <div class="computer">
+                <div class="player-name"><h3>Computer</h3></div>
+                <img id="computer-image" src="assets/images/computerWin.png" alt="Rock, Paper, Scissors, Lizard & Spock" />
+                <h4 class="scores">Opponent score: <span id="computer-score">0</span></h4>
+            </div>
 
-    
-    
-    <script src="assets/js/script.js"></script>  
-</body>
+            <div class="htp">
+                <button class="htp-btn" onClick="howToPlay()">How To Play</button>
+                <div id="htpText">
+                    <h3>How To Play:</h3>
+                    <div>
+                        <h4>Rules:</h4>
+                        The player with most points after 20 moves wins!
+                    </div>
+                    <br />
+                    <br />
+                    <div>
+                        Scissors cuts Paper // Paper covers Rock // Rock crushes Lizard // Lizard poisons Spock // Spock smashes Scissors // Scissors decapitates Lizard // Lizard eats Paper // Paper disproves Spock // Spock vaporizes Rock
+                        // Rock crushes Scissors
+                    </div>
+                    <img src="assets/images/rpsls.png" />
+                </div>
+            </div>
+        </section>
+
+        <script src="assets/js/script.js"></script>
+    </body>
 </html>

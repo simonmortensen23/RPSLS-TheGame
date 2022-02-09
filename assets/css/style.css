@@ -1,5 +1,6 @@
-html, body {
-    background-color:rgb(255, 248, 232);
+html,
+body {
+    background-color: rgb(255, 248, 232);
     color: #e36951;
     display: grid;
 }
@@ -10,49 +11,42 @@ h1 {
 
 .game-area {
     width: 75%;
-   
+
     height: 50vh;
-    margin:0 auto;
+    margin: 0 auto;
     text-align: center;
-    
-    
 }
 
-
 #choice-messages {
-    border-bottom:1px  solid #e36951;
+    border-bottom: 1px solid #e36951;
     width: fit-content;
     justify-content: center;
-    margin:auto;
+    margin: auto;
 }
 
 #game-messages {
-   
     margin: 0 auto;
 }
 
 .moves {
-    
-    
     font-weight: bold;
 }
 
 .btns {
     display: inline;
-    
 }
 
 .btn {
     background-color: #f7e6be;
     color: #e36951;
     letter-spacing: 1px;
-    border:1px solid #e36951;
+    border: 1px solid #e36951;
     font-weight: bold;
     margin: 5px 5px;
     height: 30px;
-    box-shadow:1px 3px #e36951;
+    box-shadow: 1px 3px #e36951;
     cursor: pointer;
-    transition: all .5s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 
 .btn:hover {
@@ -61,29 +55,25 @@ h1 {
 
 .player {
     background-color: #f7e6be;
-    border:5px solid #e36951;
+    border: 5px solid #e36951;
     padding: 5px;
     float: left;
     width: 35%;
     height: 40vh;
-    box-shadow:1px 3px #e36951;
-    
-    
+    box-shadow: 1px 3px #e36951;
 }
 
 .computer {
     background-color: #f7e6be;
-    border:5px solid #e36951;
+    border: 5px solid #e36951;
     padding: 5px;
     float: right;
     width: 35%;
     height: 40vh;
-    box-shadow:1px 3px #e36951;
-   
+    box-shadow: 1px 3px #e36951;
 }
 
 .player-name {
-    
 }
 
 .score-board {
@@ -106,17 +96,15 @@ img {
     margin: 0 auto;
     justify-content: center;
     clear: both;
-    
-    
 }
 
 .htp-btn {
     background-color: #f7e6be;
     color: #e36951;
-    border:1px solid #e36951;
+    border: 1px solid #e36951;
     margin: 5px 1px;
     height: 30px;
-    box-shadow:1px 3px #e36951;
+    box-shadow: 1px 3px #e36951;
     cursor: pointer;
 }
 
@@ -124,11 +112,9 @@ img {
     display: none;
     border: 5px solid #e36951;
     padding: 4px;
-    
 }
 
 #htpText img {
     height: auto;
     max-width: 75%;
 }
-
