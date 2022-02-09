@@ -1,5 +1,6 @@
 /**
  * Declare constants for DOM elements
+ * add eventlistener to startGame() on load
  * and choices for buttons
  */
  const playerScoreBoard = document.getElementById("player-score")
@@ -37,9 +38,20 @@ const CHOICES_CONFIG = [
         winsOver: ['rock', 'scissors']
     },
 ];
+
+    window.addEventListener('load', function() {
+        startGame()
+    console.log('All assets are loaded')
+})
+
     choiceMessages.innerText = "Make a choice:"
     gameMessages.innerText = "Press one of the buttons to start game \nor press How To Play for game instructions"
 
+    /**
+     *  Sets the scores and move counter to 0
+     *  and calling functions to setup the userinterface
+     *  and add eventListeners to buttons
+     */
     function startGame() {
         playerScore = 0;
         computerScore = 0;
@@ -48,6 +60,10 @@ const CHOICES_CONFIG = [
         initEventListeners();
     }
 
+    /**
+     * Sets up user interface
+     * and five buttons with data from CHOICE_CONFIG
+     */
     function initUI() {
 
         playerImage.src = `assets/images/player.png`;
@@ -61,7 +77,10 @@ const CHOICES_CONFIG = [
     
         choicesContainer.innerHTML = btnHTML;
     }
-
+    /**
+     * Add eventlisteners to the button
+     * 
+     */
     function initEventListeners() {
         const choicesButtons = document.getElementsByClassName("btn");
     
@@ -131,19 +150,18 @@ const CHOICES_CONFIG = [
             computerImage.src = `assets/images/computerWin.png`
         }
         choiceMessages.innerHTML ="Game Over";
-        gameMessages.innerText = `${msg} \nThe final score is: ${playerScore} / ${computerScore} \nRefresh page to play again!`
+        gameMessages.innerHTML = `${msg} \nThe final score is: ${playerScore} / ${computerScore} \n<button class="htp-btn" onClick="window.location.reload();">Refresh</button> page to play again!`
     }
 
         function howToPlay() {
     
             let htp = document.getElementById('htpText')
-            if (htp.style.display = "none"){
+        if (htp.style.display == "block"){
                 
-           htp.style.display = "block";
+           htp.style.display = "none";
            
+
         } else {
-            
-            htp.innerHTML = "";
-            
+            htp.style.display = "block"
             } 
         }
