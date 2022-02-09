@@ -79,8 +79,8 @@ const CHOICES_CONFIG = [
         choicesContainer.innerHTML = btnHTML;
     }
     /**
-     * Add eventlisteners to the button
-     * 
+     * Add eventlisteners (click) to the buttons
+     * and call checkWinner to check player and computer choice
      */
     function getEventListeners() {
         const choicesButtons = document.getElementsByClassName("btn");
@@ -94,11 +94,23 @@ const CHOICES_CONFIG = [
         }
     }
 
+    /**
+     * Gets computer choice for checkWinner()
+     * by getting random number between 0-4
+     * and return id from CHOICE_CONFIG array
+     */
     function getComputerChoiceId() {
         let computerChoiceData = Math.floor(Math.random() *5);
         return CHOICES_CONFIG[computerChoiceData].id;
     }
 
+    /**
+     * Function checks winner of move by
+     * comparing player input and computer choice 
+     * and determine if player or computer gets a point
+     * 
+     * Will add 1 to move counter and call endGame() when 20 moves has passed
+     */
     function checkWinner(computerChoiceId , playerChoiceId) {
         const playerChoiceData = CHOICES_CONFIG.find(eachChoice => eachChoice.id === playerChoiceId);
         playerImage.src = `assets/images/${playerChoiceId}.png`
@@ -106,17 +118,20 @@ const CHOICES_CONFIG = [
         computerImage.src = `assets/images/${computerChoiceId}.png`
         computerImage.alt = computerChoiceId
 
+      
+        
+
         gameMessages.innerText = `\nPlayer chose ${playerChoiceId} & computer chose ${computerChoiceId} `
         if(computerChoiceId === playerChoiceId) {
             //If game draws
-            resultMessages.innerText = `\nTie`
+            resultMessages.innerText = `\nTie!`
         } else if(playerChoiceData.winsOver.includes(computerChoiceId)) {
             // If player wins
-            resultMessages.innerText = `\n${playerChoiceId} beats ${computerChoiceId}`
+            resultMessages.innerText = `\n${playerChoiceId} beats ${computerChoiceId}!`
             playerScore++;
         } else {
             // If computer wins
-            resultMessages.innerText = `\n${computerChoiceId} beats ${playerChoiceId}`
+            resultMessages.innerText = `\n${computerChoiceId} beats ${playerChoiceId}!`
             computerScore++;
         }
         
@@ -129,7 +144,11 @@ const CHOICES_CONFIG = [
             endGame();
         }
     }
-
+    /**
+     * Ends game when 20 turns has passed
+     * announces the result of the game
+     * and adds Play Again button 
+     */
     function endGame () {
         const choicesButtons = document.getElementsByClassName("btn");
         for (choiceBtn of choicesButtons){
@@ -138,18 +157,18 @@ const CHOICES_CONFIG = [
     
         let msg = "";
         if (playerScore > computerScore) {
-            msg = 'Player has won';
+            msg = 'Player has won!';
     
             playerImage.src = `assets/images/loserWinner.png`
             computerImage.src = `assets/images/computerLose.png`
         } else if (computerScore > playerScore) {
     
-            msg = `Computer has won`;
+            msg = `Computer has won!`;
             playerImage.src = `assets/images/loser.png`
             computerImage.src = `assets/images/computerWin.png`
         } else {
     
-            msg = `Game is tie`;
+            msg = `Game is tie!`;
             playerImage.src = `assets/images/player.png`
             computerImage.src = `assets/images/computerWin.png`
         }
@@ -158,6 +177,9 @@ const CHOICES_CONFIG = [
         resultMessages.innerHTML = `Go for a walk or <button class="htp-btn" onClick="window.location.reload();">Play Again!</button>`
     }
 
+    /**
+     * Shows / hides how to play section  
+     */
         function howToPlay() {
     
             let htp = document.getElementById('htpText')
