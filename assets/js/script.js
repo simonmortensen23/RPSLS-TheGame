@@ -3,14 +3,15 @@
  * add eventlistener to startGame() on load
  * and choices for buttons
  */
- const playerScoreBoard = document.getElementById("player-score")
- const computerScoreBoard = document.getElementById("computer-score")
- const movesCounter = document.getElementById("moves-counter")
- const playerImage = document.getElementById("player-image")
- const computerImage = document.getElementById("computer-image")
- const gameMessages = document.getElementById("game-messages")
+ const playerScoreBoard = document.getElementById("player-score");
+ const computerScoreBoard = document.getElementById("computer-score");
+ const movesCounter = document.getElementById("moves-counter");
+ const playerImage = document.getElementById("player-image");
+ const computerImage = document.getElementById("computer-image");
+ const gameMessages = document.getElementById("game-messages");
  const choiceMessages = document.getElementById("choice-messages");
  const choicesContainer = document.getElementById("choices-container");
+ const resultMessages = document.getElementById("result-messages");
 const CHOICES_CONFIG = [
     {
         id: 'rock',
@@ -40,9 +41,9 @@ const CHOICES_CONFIG = [
 ];
 
     window.addEventListener('load', function() {
-        startGame()
+        startGame();
     console.log('All assets are loaded')
-})
+});
 
     choiceMessages.innerText = "Make a choice:"
     gameMessages.innerText = "Press one of the buttons to start game \nor press How To Play for game instructions"
@@ -56,15 +57,15 @@ const CHOICES_CONFIG = [
         playerScore = 0;
         computerScore = 0;
         moves = 0;
-        initUI();
-        initEventListeners();
+        getUI();
+        getEventListeners();
     }
 
     /**
      * Sets up user interface
      * and five buttons with data from CHOICE_CONFIG
      */
-    function initUI() {
+    function getUI() {
 
         playerImage.src = `assets/images/player.png`;
         computerImage.src = `assets/images/computerWin.png`
@@ -81,7 +82,7 @@ const CHOICES_CONFIG = [
      * Add eventlisteners to the button
      * 
      */
-    function initEventListeners() {
+    function getEventListeners() {
         const choicesButtons = document.getElementsByClassName("btn");
     
         for (choiceBtn of choicesButtons){
@@ -94,8 +95,8 @@ const CHOICES_CONFIG = [
     }
 
     function getComputerChoiceId() {
-        let randomNumber = Math.floor(Math.random() *5);
-        return CHOICES_CONFIG[randomNumber].id;
+        let computerChoiceData = Math.floor(Math.random() *5);
+        return CHOICES_CONFIG[computerChoiceData].id;
     }
 
     function checkWinner(computerChoiceId , playerChoiceId) {
@@ -104,18 +105,21 @@ const CHOICES_CONFIG = [
         playerImage.alt = playerChoiceId
         computerImage.src = `assets/images/${computerChoiceId}.png`
         computerImage.alt = computerChoiceId
+
+        gameMessages.innerText = `Player chose ${playerChoiceId} & computer chose ${computerChoiceId} `
         if(computerChoiceId === playerChoiceId) {
             //draw
-            gameMessages.innerText = `\nTie`
+            resultMessages.innerText = `\nTie`
         } else if(playerChoiceData.winsOver.includes(computerChoiceId)) {
             // Player won
-            gameMessages.innerText = `${playerChoiceId} beats ${computerChoiceId}`
+            resultMessages.innerText = `\n${playerChoiceId} beats ${computerChoiceId}`
             playerScore++;
         } else {
             // Comp wins
-            gameMessages.innerText = `${computerChoiceId} beats ${playerChoiceId}`
+            resultMessages.innerText = `\n${computerChoiceId} beats ${playerChoiceId}`
             computerScore++;
         }
+        
         computerScoreBoard.textContent = computerScore;
         playerScoreBoard.textContent = playerScore;
         moves++
@@ -150,7 +154,8 @@ const CHOICES_CONFIG = [
             computerImage.src = `assets/images/computerWin.png`
         }
         choiceMessages.innerHTML ="Game Over";
-        gameMessages.innerHTML = `${msg} \nThe final score is: ${playerScore} / ${computerScore} \n<button class="htp-btn" onClick="window.location.reload();">Refresh</button> page to play again!`
+        gameMessages.innerHTML = `${msg} \nThe final score is: ${playerScore} / ${computerScore}`
+        resultMessages.innerHTML = `<button class="htp-btn" onClick="window.location.reload();">Refresh</button> page to play again!`
     }
 
         function howToPlay() {
