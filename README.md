@@ -39,7 +39,8 @@ Through playing the game and reading the How To Play section, the user will lear
 ### Features left to implement
 
 - Multiplayer feature
-  - One thing to implement is another user-input to play against your friends. Instead of using buttons, the users could use keyboard input to choose one of the options so they can't see each others choices.
+  - Add user-input from an extra to play against your friends. Instead of using buttons, the users uses keyboard input to choose one of the options, so their choices aren't visible until compared.
+  - Extra options to increase the complexity of the game.
 
 ## Testing
 
