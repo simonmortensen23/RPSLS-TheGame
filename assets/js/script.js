@@ -1,6 +1,5 @@
 /**
  * Declare constants for DOM elements
- * add eventlistener to startGame() on load
  * and choices for buttons
  */
  const playerScoreBoard = document.getElementById("player-score");
@@ -40,11 +39,17 @@
      },
  ];
  
+ /**
+  * Add eventlistener to startGame() on load
+  */
  window.addEventListener("load", function () {
      startGame();
      console.log("All assets are loaded");
  });
  
+/**
+ * Sets choice and game messages
+ */
  choiceMessages.innerText = "Make a choice:";
  gameMessages.innerText = "Press one of the buttons to start game \nor press How To Play for game instructions";
  
