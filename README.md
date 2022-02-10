@@ -52,13 +52,33 @@ No bugs or unfixed bugs
 ### Validator Testing
 
 - HTML
- -
+ - No erros were returned when passing through the official [W3C Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsimonmortensen23.github.io%2FRPSLS-TheGame%2F)
 
 - CSS
+  - No erros were found when passing through the official [(Jigsaw) Validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fsimonmortensen23.github.io%2FRPSLS-TheGame%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 
 - JavaScript
+  - No errors were found when passing through the offical [JShint Validator](https://jshint.com/)
+    - The following metrics were returned:
+    - There are 11 functions in this file.
+    - Function with the largest signature takes 2 arguments, while the median is 0.
+    - Largest function has 18 statements, while the median is 3.
+    - The most complex function has a cyclomatic complexity value of 4 while the median is 1.
 
 
 ## Deployment
+- This site was deployed to GitHub pages. The steps to deploy are as follows:
+  - In the GitHub repository, navigate to the settings tab.
+  - When in settings, choose the tab pages from the side menu.
+  - From the source section drop-down menu, select main branch.
+  - Once main branch has been selected, the page provided the link to the completed website.
 
+The live link can be found here - [Rock, Paper, Scissors, Lizard & Spock - The Game](https://simonmortensen23.github.io/RPSLS-TheGame/)
+
+## Credits
+
+### Content
+- The code to show new pictures after every move and add eventlisteners to buttons was taken from [Rock, Paper, Scissors - Portfolio Project Scope](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+JSE_PAGPPF+2021_Q2/courseware/30137de05cd847d1a6b6d2c7338c4655/c3bd296fe9d643af86e76e830e1470dd/)
+
+### Media
 
