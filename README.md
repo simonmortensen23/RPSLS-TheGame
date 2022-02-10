@@ -31,6 +31,34 @@
   
   ![htpP2](https://user-images.githubusercontent.com/43667190/153365951-e71a4d11-a3f0-4dcb-a397-3234a640d905.PNG) ![htpBtnP2](https://user-images.githubusercontent.com/43667190/153365970-00b0cc20-e90d-4e64-8bdb-a69db5aa8574.PNG)
 
+### Features left to implement
 
+- Multiplayer feature
+  - One thing to implement is another user-input to play against your friends. Instead of using buttons, the users could use keyboard input to choose one of the options so they can't see each others choices.
+
+## Testing
+
+- I tested playing this game in different browsers: Chrome, Firefox, Opera
+- I confirmed that the game results are always correct
+- I confirmed that the header, game info, player info, results and how to play section are readable and easy to understand
+- I confirmed that the colors and fonts that are chosen are easy to read and accessible by running it through lighthoise in devtools
+
+![lighthouseP2](https://user-images.githubusercontent.com/43667190/153368190-c865a285-0186-47ab-a90d-bdabd96bb33c.PNG)
+
+### Bugs
+
+No bugs or unfixed bugs
+
+### Validator Testing
+
+- HTML
+ -
+
+- CSS
+
+- JavaScript
+
+
+## Deployment
 
 
