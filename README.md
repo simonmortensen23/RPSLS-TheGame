@@ -1,4 +1,8 @@
 # Rock, Paper, Scissors, Lizard & Spock - The Game
+Rock, paper, scissors, lizard & spock - The Game is a game that is made to get a small break from work or other chores. It is a simple game where the user can choose one of five options and will compete against the computer who will randomly pick one of the same five options.
+The user will notice that this game is quite similar to the original Rock, Paper, Scissors game, but with another two unique choices that will make the game even more interesting. This version of the game was made by Sam Kass and Karen Bryla as they experienced that most games of the classic version would end in a tie if you played with friends.  
+
+Through playing the game and reading the How To Play section, the user will learn the rules of the game and experience how it is to be met by random results with a non-random input. This site is targetting all ages, as you can use this game just to have fun or even use it to calculate statistics of winner chances.
 
 ## Features
 
