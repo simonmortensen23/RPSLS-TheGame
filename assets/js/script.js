@@ -84,7 +84,7 @@
  function getEventListeners() {
      const choicesButtons = document.getElementsByClassName("btn");
  
-     for (choiceBtn of choicesButtons) {
+     for (var choiceBtn of choicesButtons) {
          choiceBtn.addEventListener("click", function () {
              let playerChoiceId = this.getAttribute("data-id");
              const computerChoiceId = getComputerChoiceId();
@@ -147,7 +147,7 @@
   */
  function endGame() {
      const choicesButtons = document.getElementsByClassName("btn");
-     for (choiceBtn of choicesButtons) {
+     for (var choiceBtn of choicesButtons) {
          choiceBtn.style.display = "none";
      }
  
