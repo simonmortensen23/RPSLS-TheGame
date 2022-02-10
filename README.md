@@ -26,6 +26,7 @@ Through playing the game and reading the How To Play section, the user will lear
 
 - Game / result Messages
   - When the user has started the game, the page will show a game and result message after every move. The message tells the user which of the options that was chosen and winner of the move.
+  - When 20 moves has been made, this section will show a message and a play again button to start the game over.
   
   ![moveWinnerP2](https://user-images.githubusercontent.com/43667190/153365227-c1aa5b39-e9a9-4b5a-b52c-a89ec49cbb24.PNG)
 
