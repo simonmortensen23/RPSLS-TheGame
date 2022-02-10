@@ -1,8 +1,8 @@
-#Rock, Paper, Scissors, Lizard & Spock - The Game
+-Rock, Paper, Scissors, Lizard & Spock - The Game
 
-##Features
+--Features
 
-###Existing Features
+---Existing Features
 
-- Heading
-  - 
+*Heading
+  *ggg 
