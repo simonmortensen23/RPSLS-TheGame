@@ -81,4 +81,6 @@ The live link can be found here - [Rock, Paper, Scissors, Lizard & Spock - The G
 - The code to show new pictures after every move and add eventlisteners to buttons was taken from [Rock, Paper, Scissors - Portfolio Project Scope](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+JSE_PAGPPF+2021_Q2/courseware/30137de05cd847d1a6b6d2c7338c4655/c3bd296fe9d643af86e76e830e1470dd/)
 
 ### Media
-
+- The images for the hands were taken from [Open Clip Art](openclipart.org)
+- The images for the player were taken from [Tiny PNG](tinypng.com)
+- The images for the computer were taken from [istock Photo](media.istockphoto.com)
