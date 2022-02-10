@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300&display=swap');
 
+/* Body and header */
 html,
 body {
     background-color: rgb(255, 248, 232);
@@ -12,6 +13,7 @@ header {
     text-align: center;
 }
 
+/*Game Area */
 .game-area {
     width: 75%;
 
@@ -35,6 +37,7 @@ header {
     font-weight: bold;
 }
 
+/* Game buttons */
 .btns {
     display: inline;
 }
@@ -57,6 +60,7 @@ header {
     transform: scale(1.2);
 }
 
+/* Player info */
 .player {
     background-color: #f7e6be;
     border: 5px solid #e36951;
@@ -92,6 +96,7 @@ img {
     object-fit: contain;
 }
 
+/* How to play section and button */
 .htp {
     height: 30%;
     width: 75%;
@@ -116,6 +121,7 @@ img {
     display: none;
     border: 5px solid #e36951;
     padding: 4px;
+    background-color: #f7e6be;
 }
 
 #htpText img {
