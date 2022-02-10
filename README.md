@@ -1,4 +1,4 @@
--Rock, Paper, Scissors, Lizard & Spock - The Game
+# Rock, Paper, Scissors, Lizard & Spock - The Game
 
 --Features
 
